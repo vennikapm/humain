@@ -1,22 +1,18 @@
 #include<stdio.h>
-/*struct node
-{
-    int train;
-    int Time;
-    int seat;
-}s;
-*/
+
 struct timee
 {
     int first,second, third;
     
 }t1,t2,t3;
-int hari()
+int chatbot()
 {
     struct timee s,c,m;
     int k;
-    printf("enter destination");
-printf("\n1.Salem \n2.Chennai \n3.Madurai");
+    printf("Welcome to railway reservation!");
+    printf("\nStart your journwy from erode to");
+    printf(" enter destination");
+printf("\n1.Salem");//if places available we can add it 
     printf("\nenter option");
  scanf("%d",&k);
    switch(k)
@@ -24,14 +20,8 @@ printf("\n1.Salem \n2.Chennai \n3.Madurai");
         case 1:
             train();
              break;
-        case 2:
-        train();
-        break;
-        case 3:
-        train();
-        break;
-        
-   }
+        //if places available we can add more cases
+  }
    return 0;
 }
 int train()
@@ -40,9 +30,8 @@ int h,f,x;
 struct timee t1={.first=5,.second=5,.third=5};
     struct timee t2={.first=4,.second=4,.third=4};
     struct timee t3={.first=3,.second=3,.third=3};
-//printf("%d \n",t1.first);
   printf(" 3 trains are available\n");
-     printf("\n1.10:00 -%d seats available\n2.12:00 -%d seats available\n3.16:00 -%d seats available",t1.first+t1.second+t1.third,t2.first+t2.second+t2.third,t3.first+t3.second+t3.third);
+     printf("\n1.10:00 - %d seats available\n2.12:00 - %d seats available\n3.16:00 - %d seats available",t1.first+t1.second+t1.third,t2.first+t2.second+t2.third,t3.first+t3.second+t3.third);
      printf("\nenter option");
      scanf("%d",&f);
      switch(f)
@@ -57,7 +46,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                          printf("enter no.of seats");
                   scanf("%d",&x);
                   
-                      booking(x);
+                      booking(x);//getting the details of the passenger
                   
                         t1.first-=x;
                   
@@ -71,7 +60,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                        printf("enter no.of seats");
                   scanf("%d",&x);
                   
-                      booking(x);
+                      booking(x);//getting the details of the passenger
                   
                         t1.second-=x;
                   
@@ -86,7 +75,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                   scanf("%d",&x);
                   
                       
-                  booking(x);
+                  booking(x);//getting the details of the passenger
                         t1.third-=x;
                   
         if(t1.third<0)
@@ -108,7 +97,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                   scanf("%d",&x);
                   
                       
-                  booking(x);
+                  booking(x);//getting the details of the passenger
                         t2.first-=x;
                   
         if(t2.first<0)
@@ -121,7 +110,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                      printf("enter no.of seats");
                   scanf("%d",&x);
                   
-                      booking(x);
+                      booking(x);//getting the details of the passenger
                   
                         t2.second-=x;
                   
@@ -135,7 +124,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                         printf("enter no.of seats");
                   scanf("%d",&x);
                   
-                      booking(x);
+                      booking(x);//getting the details of the passenger
                   
                         t2.third-=x;
                   
@@ -157,7 +146,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                          printf("enter no.of seats");
                   scanf("%d",&x);
                   
-                      booking(x);
+                      booking(x);//getting the details of the passenger
                   
                         t3.first-=x;
                   
@@ -172,7 +161,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                          printf("enter no.of seats");
                   scanf("%d",&x);
                   
-                      booking(x);
+                      booking(x);//getting the details of the passenger
                   
                         t3.second-=x;
                   
@@ -187,7 +176,7 @@ struct timee t1={.first=5,.second=5,.third=5};
                   scanf("%d",&x);
                   
                       
-                  booking(x);
+                  booking(x);//getting the details of the passenger
                         t3.third-=x;
                   
         if(t3.third<0)
@@ -222,8 +211,9 @@ a--;
 int main()
 {
     int k;
-    //printf("enter desination");
-    hari();
-    printf("thank you");
+    
+    chatbot();
+    printf("\n");
+    printf("thank you for using me!");//greetings for making reservation
     return 0;   
 }
